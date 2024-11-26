@@ -1,0 +1,21 @@
+@font-face {
+    font-family: "Pusia-Bold";
+    src: url("/pusia-bold.ttf") format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "SupercellText";
+    src: url("../assets/fonts/SupercellText_Bd.ttf") format("truetype");
+    font-weight: normal;
+}
+
+$brawlFontMain: "Pusia-Bold", sans-serif;
+$additionalFont: "SupercellText", sans-serif;
+
+@mixin shadow() {
+    color: #fff;
+    -webkit-text-stroke: 1px #000;
+    text-shadow: 0 2px 0 #000;
+    //background-size: 100% 100%;
+}

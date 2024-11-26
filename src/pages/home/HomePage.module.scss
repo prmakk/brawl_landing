@@ -1,0 +1,105 @@
+@import "../../styles/variables.scss";
+
+.home {
+    position: relative;
+    background-image: url("/background.webp");
+    background-position: bottom;
+    background-size: cover;
+    -webkit-background-size: cover;
+    //min-height: 80vh;
+    padding-top: 70px;
+    width: 100%;
+    font-family: $brawlFontMain;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    .dropdown {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-family: $additionalFont;
+
+        select {
+            width: 122px;
+            padding: 11px 25px 11px 33px;
+            font-size: 14px;
+            border-radius: 25px;
+            border: none;
+            outline: none;
+            appearance: none;
+            -webkit-appearance: none; /* Для Safari */
+            background-color: #2349b1;
+            color: #fff;
+
+            background-image: url(/language-globe.svg), url(/language-caret.svg);
+            -webkit-background-size: 18px, 12px 18px, 12px;
+            background-size: 18px, 12px;
+            background-repeat: no-repeat, no-repeat;
+            background-position: 10px, right 11px center;
+        }
+    }
+
+    .content {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-bottom: 100px;
+
+        .logo {
+            max-width: 350px;
+            display: flex;
+            justify-content: center;
+
+            img {
+                max-width: 40%;
+            }
+        }
+
+        .nested {
+            h3 {
+                @include shadow();
+                font-size: 24px;
+                max-width: 290px;
+                text-align: center;
+            }
+
+            .button {
+                @include shadow();
+                display: block;
+                width: 100%;
+                background-color: transparent;
+                cursor: pointer;
+                border: none;
+                padding: 18px 4px 26px 4px;
+                -webkit-transform: skew(-7deg);
+                transform: skew(-7deg);
+                text-decoration: none;
+                background-image: url("/button-gold.svg");
+                text-align: center;
+                font-size: 24px;
+                -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                line-height: 32px;
+            }
+
+            .download {
+                @include shadow();
+                text-align: center;
+                font-size: 24px;
+
+                .links {
+                    display: flex;
+                    gap: 15px;
+
+                    a {
+                        img {
+                            max-width: 135px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
